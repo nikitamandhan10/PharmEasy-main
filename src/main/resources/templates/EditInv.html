@@ -12,7 +12,8 @@
         <table border="0" cellpadding="10">
             <tr>
                 <td>MedicineID:</td>
-                <td><input type="text" th:field="*{medicineID}" readonly="readonly"></td>
+                <td><input type="text" th:field="*{medicineID}" readonly="readonly">
+                    <input type="hidden" th:field="*{id}" ></td></td>
             </tr>
             <tr>
                 <td>Medicine Name:</td>

@@ -2,20 +2,29 @@ package com.example.PharmEasy.Admin.Model;
 
 import org.springframework.data.mongodb.core.mapping.Document;
 
-@Document("SalesDetails")
+@Document("Order")
 public class SalesModel {
 
-    private String orderID;
+    private int orderID;
     private String userID;
     private String medicineName;
+    private int Quantity;
     private float totalCost;
+
+    public int getQuantity() {
+        return Quantity;
+    }
+    public void setQuantity(int quantity) {
+        Quantity = quantity;
+    }
+
     private String orderDate;
 
-    public String getOrderID() {
+    public int getOrderID() {
         return orderID;
     }
 
-    public void setOrderID(String orderID) {
+    public void setOrderID(int orderID) {
         this.orderID = orderID;
     }
 

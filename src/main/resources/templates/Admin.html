@@ -241,6 +241,11 @@ table, th, td {
     <input name="nav" type="radio" class="about-radio" id="about">
     <div class="page about-page">
         <div align="center" class="page-contents">
+            <form action="/search" method="GET">
+                <input type="text" name="search" th:value="${search}" />
+                <input type="submit" value="Search" />
+            </form>
+            <br/>
             <table BORDER="1" CELLPADDING="15" class="table table-bordered table-striped">
                 <thead>
                 <tr>
@@ -249,6 +254,7 @@ table, th, td {
                     <th>PerCost</th>
                     <th>Quantity</th>
                     <th>Last Updated</th>
+                    <th>Operations</th>
                 </tr>
                 </thead>
                 <tbody>
